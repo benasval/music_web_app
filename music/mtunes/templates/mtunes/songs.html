@@ -5,16 +5,17 @@
 <div class = "container"style =  "padding-top: 3%;">
 
   {% for i in song reversed %}
-  <div class="card mb-3" style="max-width: 940px; padding-top: 0%;">
+  <div class="card mb-3" style="max-width: 600px; padding-top: 0%;">
       <div class="row no-gutters">
-        <div class="col-md-4">
+        <div class="col-md-0">
           <img src="../../../{{i.image}}" class="card-img" alt="...">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
           <div class="card-body">
             <h5 class="card-title" style=" font-weight: 550;">{{i.name}}</h5>
-            <p class="card-text">Tags: {{i.tags}}</p>
-          <p class="card-text">Movie: {{i.movie}}</p>
+            <p class="card-text">Artist: </p>
+          <h6 class="card-title">{{i.singer}}</h6>
+          <hr>
           
           {% if user.is_authenticated %}
           <form action="/mtunes/history" method="POST">{% csrf_token %}

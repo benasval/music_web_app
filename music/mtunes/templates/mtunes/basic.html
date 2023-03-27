@@ -44,14 +44,14 @@
         </div>
         {% if user.is_authenticated %}
                 <ul class="navbar-nav ml-auto"></ul>
-                <li class="nav-item dropdown">
+                <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome {{request.user}}</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" onclick="logout()">Logout</a>
                       <a class="dropdown-item" href="/mtunes/history">History</a>
                       <a class="dropdown-item" href="/mtunes/watchlater">Watch Later</a>
                     </div>
-                  </li>
+                </div>
                 </ul>
                 <script>
                     function logout(){
